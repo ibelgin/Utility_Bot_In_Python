@@ -16,6 +16,14 @@ pip install -r requirments.txt
 `Run __main__.py
 ```
 
+## Feauture's
+
+> Used GTTS Module To Convert Text To Speech
+
+> To GET Weather Information - openweathermap.org ( API )
+
+> To GET Top News Headlines  - newsapi.org ( API )
+
 ## Built With
 
 * Python
