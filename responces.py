@@ -31,12 +31,12 @@ welcome = {
         -> Playsound  - \" Playing The Converted Audio \"
         -> Requests   - \" To Get Responce From API \"
         -> Urllib3    - \" Might Be Needed \"
+        -> WebBrowser - \" For Redirecting To Webpage \"
 
     API's Used :
      
         -> Weather -  Open Weather Map  - openweathermap.org
         -> News    -  NewsAPI           - newsapi.org
- 
     '''
 
 }
