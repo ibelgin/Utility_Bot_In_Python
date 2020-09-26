@@ -13,13 +13,13 @@ def weather():
         data = result.json()
         if data["cod"] == 200:
             doc = ('''
-        The Weather At {} is {}.
+        {} Will Be Formed At {}
         Description - {}.
 
         Temprature is {} Degree Kelvin
                 '''.format(
-                    data['name'],
                     data['weather'][0]['main'],
+                    data['name'],
                     data['weather'][0]['description'],
                     data['main']['temp']
                 ))
