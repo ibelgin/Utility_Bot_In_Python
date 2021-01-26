@@ -1,15 +1,15 @@
-from re import split
 import tkinter as tk
-from news import get_news
-from weather import weather
-from responces import welcome,jokes
-from text_converter import main_speak 
+import sys, os
+from modules.news import get_news
+from modules.weather import weather
+from modules.responces import welcome,jokes
+from modules.text_converter import main_speak 
 import webbrowser
 import random
 
 root = tk.Tk()
-
 generate_random = lambda x : random.randint(0,x)
+sys.path.append(os.path.abspath(os.path.join('..', 'config')))
 
 def Bot_Responce(User_Input):
     if (User_Input.lower() in welcome["BotStart"]):
