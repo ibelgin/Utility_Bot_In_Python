@@ -1,6 +1,5 @@
 import json
 import requests
-from text_converter import main_speak
 
 def get_news(count):
     try:

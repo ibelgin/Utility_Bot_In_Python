@@ -1,5 +1,4 @@
 import requests
-from text_converter import main_speak
 
 def weather(city):
     try:
