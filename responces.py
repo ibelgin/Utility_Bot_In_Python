@@ -1,47 +1,11 @@
-welcome = {
-    "start_bot" : '''\n
-        Hi Welcome To Belgin's Chat Bot .\n
-        How Should I Call You : )
-    ''',
-
-    "All_Commands":[
-        "  ->  Jokes",
-        "  ->  News",
-        "  ->  About",
-        "  ->  Weather",
-        "  ->  Exit",
-        "  ->  Open",
-        "  ->  Help\n"
-    ],
-
-    "Name_reply":''' 
-    Hi {} ...
-
-    Ha ! Lets Get Started
-    ''',
-
-    "about":'''
-    Hi ! I Am Belgin's Chat Bot .
-    
-    Programmed Using Python
-
-    Modules Used :
-
-        -> gTTS       - \" Converting Text To  Speech \"
-        -> Playsound  - \" Playing The Converted Audio \"
-        -> Requests   - \" To Get Responce From API \"
-        -> Urllib3    - \" Might Be Needed \"
-        -> WebBrowser - \" For Redirecting To Webpage \"
-
-    API's Used :
-     
-        -> Weather -  Open Weather Map  - openweathermap.org
-        -> News    -  NewsAPI           - newsapi.org
-    '''
-
+welcome={
+    "Hi":["Hi There !","Hi !","Hi How can i help you ?"],
+    "BotStart":["hi","start bot","start"],
+    "News":["get me news","read news","news","news today"],
+    "Jokes":["tell me a joke","joke","tell a joke"]
 }
 
-jokes = [
+jokes =[
     "Complaining about the lack of smoking shelters, the nicotine addicted Python programmers said there ought to be 'spaces for tabs'.",
     "Ubuntu users are apt to get this joke.",
     "Obfuscated Reality Mappers (ORMs) can be useful database tools.",
@@ -136,17 +100,5 @@ jokes = [
     "What does 'Emacs' stand for? 'Exclusively used by middle aged computer scientists.'",
     "What does pyjokes have in common with Adobe Flash? It gets updated all the time, but never gets any better.",
     "Why does Waldo only wear stripes? Because he doesn't want to be spotted.",
-    "I went to a street where the houses were numbered 8k, 16k, 32k, 64k, 128k, 256k and 512k. It was a trip down Memory Lane.",
-    "!false, (It's funny because it's true)",
-    "['hip', 'hip'] (hip hip array!)"
+    "I went to a street where the houses were numbered 8k, 16k, 32k, 64k, 128k, 256k and 512k. It was a trip down Memory Lane."
 ]
-
-myhelp = '''
-    \" News \"        - Say's The Top 5 News 
-    \" Jokes \"       - Say's A Programmer Joke
-    \" About \"       - About The BOT
-    \" Weather \"     - Say's The Weather In The Entered City Name
-    \" Exit \"        - Quit The Bot
-    \" Open \"        - Open <Website Address Without Http or Https> eg. Open google.com
-    \" Help \"        - Print This Again
-'''

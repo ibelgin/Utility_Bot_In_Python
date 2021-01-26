@@ -1,35 +1,23 @@
 import requests
 from text_converter import main_speak
 
-def weather():
+def weather(city):
     try:
-        main_speak("Enter The City Name ")
-        city = input("\n Enter The City Name -> ")
-        print()
-        
         Api_Key = "2606f769271b8d545fe3458b2b72ed9f" # Paste Your API ID Here
         final_URL = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}".format(city,Api_Key)
         result = requests.get(final_URL)
         data = result.json()
         if data["cod"] == 200:
-            doc = ('''
-        {} Will Be Formed At {}
-        Description - {}.
-
-        Temprature is {} Degree Kelvin
-                '''.format(
-                    data['weather'][0]['main'],
-                    data['name'],
-                    data['weather'][0]['description'],
-                    data['main']['temp']
-                ))
-            print(doc)
-            main_speak(doc)
+            weather = {
+                "Main":data['weather'][0]['main'],
+                "city":data['name'],
+                "Temprature":str(data['main']['temp'])+" Kelvin"
+            }
+            return weather
         else:
-            print("\n Sorry The Entered City Does Not Exist Or Check Your Internet Connection\n")
-            main_speak("Sorry The Entered City Does Not Exist Or Check Your Internet Connection")
+            return -1
     except:
-        print("\n Please Check Your Internet Connection : ( \n")
+        return 1
 
 
 
