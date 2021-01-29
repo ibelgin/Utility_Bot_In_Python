@@ -1,5 +1,7 @@
 import tkinter as tk
 import sys, os
+import psutil
+
 from modules.news import get_news
 from modules.weather import weather
 from modules.responces import welcome,jokes
@@ -10,6 +12,12 @@ import random
 root = tk.Tk()
 generate_random = lambda x : random.randint(0,x)
 sys.path.append(os.path.abspath(os.path.join('..', 'config')))
+
+def Battery_Percentage():
+    battery = psutil.sensors_battery()
+    plugged = battery.power_plugged
+    percent = str(battery.percent)
+    return percent
 
 def Bot_Responce(User_Input):
     
