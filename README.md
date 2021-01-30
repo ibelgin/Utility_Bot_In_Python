@@ -13,7 +13,7 @@ pip install -r requirments.txt
 ```
 
 ```sh
-`Run Bot_UI.py
+Run Bot_UI.py
 ```
 
 ## Feauture's
@@ -38,7 +38,8 @@ pip install -r requirments.txt
 
 ## Authors
 
-* **Belgin Android** - *All Works* - [Belgin Android](https://www.youtube.com/c/belginandroid)
+* **Belgin Android** - *Backend* - [Belgin Android](https://github.com/Belgin-Android)
+* **Karthikeyan** - *Frontend* - [Karthikeyan](https://github.com/karthikeyan-17)
 
 ## Acknowledgments
 
