@@ -1,7 +1,7 @@
 import tkinter as tk
 import sys, os
-import psutil
 
+import modules.generalfun
 from modules.news import get_news
 from modules.weather import weather
 from modules.responces import welcome,jokes
@@ -13,12 +13,10 @@ root = tk.Tk()
 generate_random = lambda x : random.randint(0,x)
 sys.path.append(os.path.abspath(os.path.join('..', 'config')))
 
-def Battery_Percentage():
-    battery = psutil.sensors_battery()
-    plugged = battery.power_plugged
-    percent = str(battery.percent)
-    return percent
-
+def copy_to_clipboard(str):
+    root.clipboard_clear()
+    root.clipboard_append(str)
+    root.update()
 def Bot_Responce(User_Input):
     
     # Starting The Bot
@@ -84,6 +82,21 @@ def Bot_Responce(User_Input):
     elif ( "search for" == User_Input.lower()[0:10]):
         webbrowser.open("https://www.google.com/search?q="+User_Input[10:])
         text.insert(tk.END,"\n"+"Opened Google With The Search Query - "+User_Input[10:]+"\n")
+
+    elif ("password" in User_Input.lower()):
+        for i in User_Input.split(' '):
+            if (i.isdigit()):
+                responce = modules.generalfun.passwordGenerator(i)
+                text.insert(tk.END,"\n"+"Password Saved To Clipboard - "+responce+"\n")
+                copy_to_clipboard(str(responce))
+                break
+            else:
+                continue 
+        else:
+            responce = modules.generalfun.passwordGenerator(8)
+            text.insert(tk.END,"\n"+"Password Saved To Clipboard - "+responce+"\n")
+            copy_to_clipboard(responce)
+        text.insert(tk.END,"\n"+"")
         
 def send():
     text.config(state='normal')
