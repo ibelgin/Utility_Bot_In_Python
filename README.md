@@ -13,7 +13,7 @@ pip install -r requirments.txt
 ```
 
 ```sh
-`Run __main__.py
+`Run Bot_UI.py
 ```
 
 ## Feauture's
