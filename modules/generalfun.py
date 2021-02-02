@@ -1,3 +1,4 @@
+import requests
 import random
 import string
 
@@ -7,3 +8,9 @@ def passwordGenerator(pass_len):
     for y in range(int(pass_len)- 4):
         password = password + random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation)
     return password
+
+def ip_address():
+    res=requests.get('https://ipinfo.io/')
+    data=res.json()
+    return data
+    
