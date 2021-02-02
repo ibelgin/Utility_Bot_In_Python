@@ -14,14 +14,14 @@ def ip_address(ipadd):
         res=requests.get('http://ipinfo.io/'+ipadd+'?token=cf6c6c0ce2d37e')
         data=res.json()
         data_returned = '''
-            Ip Address : {} 
-            City : {}
-            Region : {}
-            country : {}
-            Location : {}
-            Org : {}
-            postal : {}
-            Time Zone : {}
+    Ip Address : {} 
+    City : {}
+    Region : {}
+    country : {}
+    Location : {}
+    Org : {}
+    postal : {}
+    Time Zone : {}
         '''.format(data["ip"],data["city"],data["region"],data["country"],data["loc"],data["org"],data["postal"],data["timezone"])
         return data_returned
     except:
