@@ -97,7 +97,11 @@ def Bot_Responce(User_Input):
             text.insert(tk.END,"\n"+"Password Saved To Clipboard - "+responce+"\n")
             copy_to_clipboard(responce)
         text.insert(tk.END,"\n"+"")
-        
+    
+    elif ("ipaddress" in User_Input.lower()):
+        temp = User_Input.split(' ')
+        result = modules.generalfun.ip_address(temp)
+            
 def send():
     text.config(state='normal')
     text.insert(tk.END,"\n"+"You : "+e.get())
