@@ -100,7 +100,9 @@ def Bot_Responce(User_Input):
     
     elif ("ipaddress" in User_Input.lower()):
         temp = User_Input.split(' ')
-        result = modules.generalfun.ip_address(temp)
+        result = modules.generalfun.ip_address(temp[1])
+        print(result)
+        text.insert(tk.END,"\n"+result+"\n")
             
 def send():
     text.config(state='normal')
