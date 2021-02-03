@@ -27,6 +27,7 @@ def ip_address(ipadd):
     except:
         return "Check Your Internet Connection Or Enter a Valid IP"
 
+# Sample JSON Output
 # {
 #  "ip": "139.130.4.5",
 #  "city": "Brisbane",
