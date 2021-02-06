@@ -102,3 +102,13 @@ jokes =[
     "Why does Waldo only wear stripes? Because he doesn't want to be spotted.",
     "I went to a street where the houses were numbered 8k, 16k, 32k, 64k, 128k, 256k and 512k. It was a trip down Memory Lane."
 ]
+
+help= '''
+        Utility Bot Help 
+    Type Commands To Get it Working   
+
+    1. /News         - Gets you the latest News
+    2. /Joke         - Gets a random joke
+    3. /speak <text> - Speaks a given text
+    4. /
+'''
