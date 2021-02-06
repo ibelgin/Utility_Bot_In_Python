@@ -107,13 +107,14 @@ help= '''
     Utility Bot Help 
 Type Commands To Get it Working   
 
-1. /News           - Gets you the latest News
-2. /Joke           - Gets a random joke
-3. /Speak <text>   - Speaks a given text
-4. /Open <website> - Opens the website in webbrowser
-5. /Weather <city> - Gets Information bout the weather
-6. /Password <len> - Generates a random password of len
-7. /ipaddress <ip> - gets basic information bout the ipaddress
-8. /help           - display this help
-9. /clear          - clears the screen
+0. /News           - Gets you the latest News
+1. /Joke           - Gets a random joke
+2. /Speak <text>   - Speaks a given text
+3. /Open <website> - Opens the website in webbrowser
+4. /Weather <city> - Gets Information bout the weather
+5. /Password <len> - Generates a random password of len
+6. /ipaddress <ip> - gets basic information bout the ipaddress
+7. /help           - display this help
+8. /clear          - clears the screen
+9. /start          - start the bot  
 '''
