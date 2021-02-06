@@ -103,12 +103,17 @@ jokes =[
     "I went to a street where the houses were numbered 8k, 16k, 32k, 64k, 128k, 256k and 512k. It was a trip down Memory Lane."
 ]
 
-help= '''
-        Utility Bot Help 
-    Type Commands To Get it Working   
+help= ''' 
+    Utility Bot Help 
+Type Commands To Get it Working   
 
-    1. /News         - Gets you the latest News
-    2. /Joke         - Gets a random joke
-    3. /speak <text> - Speaks a given text
-    4. /
+1. /News           - Gets you the latest News
+2. /Joke           - Gets a random joke
+3. /Speak <text>   - Speaks a given text
+4. /Open <website> - Opens the website in webbrowser
+5. /Weather <city> - Gets Information bout the weather
+6. /Password <len> - Generates a random password of len
+7. /ipaddress <ip> - gets basic information bout the ipaddress
+8. /help           - display this help
+9. /clear          - clears the screen
 '''

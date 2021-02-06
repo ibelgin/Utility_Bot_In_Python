@@ -33,7 +33,7 @@ def Bot_Responce(User_Input):
 
     # Printing The News
 
-    elif (User_Input.lower() == "/News"):
+    elif (User_Input.lower() == "/news"):
         responce =get_news(5)
         if (responce == -1):
             text.insert(tk.END,"\n"+"Bot : "+"Please Check Your Internet Connection")
@@ -45,7 +45,7 @@ def Bot_Responce(User_Input):
 
     # Generate a Random Joke
 
-    elif (User_Input.lower() == "/Joke"):
+    elif (User_Input.lower() == "/joke"):
         no = generate_random(len(jokes)-1)
         text.insert(tk.END,"\n"+"\n {} \n".format(jokes[no]))
 
@@ -65,8 +65,8 @@ def Bot_Responce(User_Input):
 
     # Find Weather of A City 
 
-    elif ( "weather in" == User_Input.lower()[0:10]):
-        temp = User_Input[10:]
+    elif ( "/weather" == User_Input.lower()[0:8]):
+        temp = User_Input[9:] 
         responce = weather(temp)
         if (responce == -1):
             text.insert(tk.END,"\n"+"Bot : Enter A Valid City Name or Check Your Internet Connection"+"\n")
@@ -83,7 +83,7 @@ def Bot_Responce(User_Input):
         webbrowser.open("https://www.google.com/search?q="+User_Input[10:])
         text.insert(tk.END,"\n"+"Opened Google With The Search Query - "+User_Input[10:]+"\n")
 
-    elif ("password" in User_Input.lower()):
+    elif ("/password" in User_Input.lower()):
         for i in User_Input.split(' '):
             if (i.isdigit()):
                 responce = modules.generalfun.passwordGenerator(i)
@@ -98,29 +98,33 @@ def Bot_Responce(User_Input):
             copy_to_clipboard(responce)
         text.insert(tk.END,"\n"+"")
     
-    elif ("ipaddress" in User_Input.lower()):
+    elif ("/ipaddress" in User_Input.lower()):
         temp = User_Input.split(' ')
         result = modules.generalfun.ip_address(temp[1])
         print(result)
         text.insert(tk.END,"\n"+"Bot :"+"\n")
         text.insert(tk.END,"\n"+result+"\n")
 
-    elif ("help" in User_Input.lower()):
+    elif ("/help" in User_Input.lower()):
         text.insert(tk.END,"\n"+"Bot :"+"\n")
         text.insert(tk.END,"\n"+help+"\n")
         
 
-def send():
+def sendmessage(event):
     text.config(state='normal')
     text.insert(tk.END,"\n"+"You : "+e.get())
     text.insert(tk.END,"\n")
     Bot_Responce(e.get())
     text.config(state='disabled')
 
-text =tk.Text(root,bg="#FFF",width=50)
+def func(event):
+    print("You hit return.")
+
+text =tk.Text(root,bg="#FFF",width=80)
 text.grid(row=0,column=0,columnspan=2)
-e=tk.Entry(root,width=50)
-send=tk.Button(root,text="Send",bg="#FFF",width=15,command=send).grid(row=1,column=1)
+e=tk.Entry(root,width=80)
+root.bind('<Return>', sendmessage)
+send=tk.Button(root,text="Send",bg="#FFF",width=15,command=sendmessage).grid(row=1,column=1)
 e.grid(row=1,column=0)
 root.title("Utility Bot")
 tk.mainloop()
